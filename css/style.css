@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: bolder;
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 1.1px;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .screen {
@@ -50,6 +61,30 @@ input[type=button] {
   background-color: #000000;
 }
 
+.emphasis-gold {
+  color: rgb(223, 223, 0);
+}
+
+.emphasis-green {
+  color: rgb(54, 190, 0);
+}
+
+.emphasis-red {
+  color: rgb(175, 2, 2);
+}
+
+.emphasis-orange {
+  color: rgb(226, 141, 43);
+}
+
+.emphasis-light-orange {
+  color: rgb(253, 197, 133);
+}
+
+.emphasis-light-red {
+  color: rgb(230, 88, 88);
+}
+
 .screen {
   width: 800px;
   height: 540px;
@@ -59,7 +94,7 @@ input[type=button] {
   row-gap: 20px;
 }
 
-#select-mode-menu, #select-name-menu, #game, #game-over {
+#mode-menu, #name-menu, #game, #game-over {
   display: none;
 }
 

@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=New+Amsterdam&family=Squada+One&display=swap" rel="stylesheet">    
+    
     <link rel="stylesheet" href="./css/style.css">
     <title>My Shooter Friend</title>
 </head>
 <body>
 
     <div class="screen" id="initial-menu">
-        <input type="button" value="PLAY" id="to-select-mode">
-        <input type="button" value="GITHUB">
+        <input type="button" value="PLAY" id="button-to-mode">
+        <input type="button" value="GITHUB" onclick="window.open('https://github.com/georgejrdev/My-Shooter-Friend')">
 
         <p>
             Made by 
@@ -21,16 +26,16 @@
     </div>
 
 
-    <div class="screen" id="select-mode-menu">
-        <input type="button" value="1 VS 1" id="select-1v1">
-        <input type="button" value="1 VS COMPUTER" id="select-1vC">
+    <div class="screen" id="mode-menu">
+        <input type="button" value="1 VS 1" id="button-mode-1v1">
+        <input type="button" value="1 VS COMPUTER" id="button-mode-1vc">
     </div>
 
 
-    <div class="screen" id="select-name-menu">
-        <input maxlength="10" type="text" id="player-one-name" placeholder="Player 1">
-        <input maxlength="10" type="text" id="player-two-name" placeholder="Player 2">
-        <input type="button" value="START" id="to-game">
+    <div class="screen" id="name-menu">
+        <input maxlength="10" type="text" id="player-name-one" placeholder="Player 1">
+        <input maxlength="10" type="text" id="player-name-two" placeholder="Player 2">
+        <input type="button" value="START" id="button-to-game">
     </div>
 
     
@@ -38,15 +43,15 @@
         <div id="status-bar">
             <div class="player-info" id="player-info-one">
                 <p class="player-status" id="player-status-one">Player 1 - 100/100</p>
-                <div class="player-bar" id="player-one-bar">
-                    <div class="life" id="player-one-life"></div>
+                <div class="player-bar" id="player-bar-one">
+                    <div class="life" id="player-life-one"></div>
                 </div>
             </div>
             
             <div class="player-info" id="player-two">
                 <p class="player-status" id="player-status-two">100/100 - Player 2</p>
-                <div class="player-bar" id="player-two-bar">
-                    <div class="life" id="player-two-life"></div>
+                <div class="player-bar" id="player-bar-two">
+                    <div class="life" id="player-life-two"></div>
                 </div>
             </div>
         </div>
@@ -55,21 +60,20 @@
         
         <div id="info">
             <div id="text">
-                <p id="message">AAAAAAAAAAAAAA | AAAAAAAAAAAAAAAAAAAAA | AAAAAAAAA | AAAAAAAAAA</p>
+                <p id="message"></p>
             </div>
             <div id="animation">
-                <input type="button" value="TEMPORARY" id="to-game-over">
             </div>
         </div>
     </div>
     
 
     <div class="screen" id="game-over">
-        <p id="game-over-info">Player 1 mandou vc se fuder</p>
+        <p id="game-over-info"></p>
         <input type="button" value="PLAY AGAIN" onclick="window.location.reload()">
     </div>
 
 
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/App.js"></script>
 </body>
 </html>
