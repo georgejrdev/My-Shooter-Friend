@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Shooter Friend</title>
+</head>
+<body>
+
+    <div class="screen" id="initial-menu">
+        <input type="button" value="PLAY" id="to-select-mode">
+        <input type="button" value="GITHUB">
+
+        <p>
+            Made by 
+            <a class="light-blue" target="_blank" href="https://georgejrdev.github.io/Link-Tree">George</a> 
+            and 
+            <a class="light-red" target="_blank" href="https://github.com/keakzinho">Keven</a>
+        </p>
+    </div>
+
+
+    <div class="screen" id="select-mode-menu">
+        <input type="button" value="1 VS 1" id="select-1v1">
+        <input type="button" value="1 VS COMPUTER" id="select-1vC">
+    </div>
+
+
+    <div class="screen" id="select-name-menu">
+        <input maxlength="10" type="text" id="player-one-name" placeholder="Player 1">
+        <input maxlength="10" type="text" id="player-two-name" placeholder="Player 2">
+        <input type="button" value="START" id="to-game">
+    </div>
+
+    
+    <div class="screen" id="game">
+        <div id="status-bar">
+            <div class="player-info" id="player-info-one">
+                <p class="player-status" id="player-status-one">Player 1 - 100/100</p>
+                <div class="player-bar" id="player-one-bar">
+                    <div class="life" id="player-one-life"></div>
+                </div>
+            </div>
+            
+            <div class="player-info" id="player-two">
+                <p class="player-status" id="player-status-two">100/100 - Player 2</p>
+                <div class="player-bar" id="player-two-bar">
+                    <div class="life" id="player-two-life"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="content"></div>
+        
+        <div id="info">
+            <div id="text">
+                <p id="message">AAAAAAAAAAAAAA | AAAAAAAAAAAAAAAAAAAAA | AAAAAAAAA | AAAAAAAAAA</p>
+            </div>
+            <div id="animation">
+                <input type="button" value="TEMPORARY" id="to-game-over">
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="screen" id="game-over">
+        <p id="game-over-info">Player 1 mandou vc se fuder</p>
+        <input type="button" value="PLAY AGAIN" onclick="window.location.reload()">
+    </div>
+
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
