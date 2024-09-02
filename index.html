@@ -14,8 +14,10 @@
 <body>
 
     <div class="screen" id="initial-menu">
-        <input type="button" value="PLAY" id="button-to-mode">
-        <input type="button" value="GITHUB" onclick="window.open('https://github.com/georgejrdev/My-Shooter-Friend')">
+        <div class="group-button">
+            <input type="button" value="PLAY" id="button-to-mode">
+            <input type="button" value="GITHUB" onclick="window.open('https://github.com/georgejrdev/My-Shooter-Friend')">
+        </div>
 
         <p>
             Made by 
@@ -27,15 +29,19 @@
 
 
     <div class="screen" id="mode-menu">
-        <input type="button" value="1 VS 1" id="button-mode-1v1">
-        <input type="button" value="1 VS COMPUTER" id="button-mode-1vc">
+        <div class="group-button">
+            <input type="button" value="1 VS 1" id="button-mode-1v1">
+            <input type="button" value="1 VS COMPUTER" id="button-mode-1vc">
+        </div>
     </div>
 
 
     <div class="screen" id="name-menu">
-        <input maxlength="10" type="text" id="player-name-one" placeholder="Player 1">
-        <input maxlength="10" type="text" id="player-name-two" placeholder="Player 2">
-        <input type="button" value="START" id="button-to-game">
+        <div class="group-button">
+            <input maxlength="10" type="text" id="player-name-one" placeholder="Player 1">
+            <input maxlength="10" type="text" id="player-name-two" placeholder="Player 2">
+            <input type="button" value="START" id="button-to-game">
+        </div>
     </div>
 
     
@@ -56,7 +62,29 @@
             </div>
         </div>
     
-        <div id="content"></div>
+        <div id="content">
+            <div class="table-sections" id="left-table">
+                <div class="cards" id="left-cards">
+                    <div id="q" class="card"></div>
+                    <div id="w" class="card"></div>
+                    <div id="e" class="card"></div>
+                    <div id="a" class="card"></div>
+                    <div id="s" class="card"></div>
+                </div>
+            </div>
+
+            <div class="table-sections" id="mid-table"></div>
+
+            <div class="table-sections" id="right-table">
+                <div class="cards" id="right-cards">
+                    <div id="u" class="card"></div>
+                    <div id="i" class="card"></div>
+                    <div id="o" class="card"></div>
+                    <div id="k" class="card"></div>
+                    <div id="l" class="card"></div>
+                </div>
+            </div>
+        </div>
         
         <div id="info">
             <div id="text">
@@ -69,6 +97,7 @@
     
 
     <div class="screen" id="game-over">
+        <h1>GAME OVER</h1>
         <p id="game-over-info"></p>
         <input type="button" value="PLAY AGAIN" onclick="window.location.reload()">
     </div>

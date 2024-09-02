@@ -1,9 +1,14 @@
+body{
+    background-color: #312e39;
+}
+
 .screen{
     background-color: lightgray;
+    border: 4px solid black;
 }
 
 input[type = "button"]{
-    background-color: red;
+    background-color: black;
     color: white;
 }
 
@@ -65,4 +70,14 @@ input[type = "button"]{
 
 .emphasis-light-red{
     color: rgb(230, 88, 88);
+}
+
+#initial-menu p{
+    color: white;
+}
+
+
+#game-over h1{
+    color: #FF0000;
+    -webkit-text-stroke: 3px white;
 }

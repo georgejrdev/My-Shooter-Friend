@@ -24,7 +24,7 @@ export function setMessage() {
     if (MESSAGE.totalDamage != 0)
         MESSAGE.message += ` | <span class='emphasis-orange'>Total damage</span>: ${MESSAGE.totalDamage}`;
     if (MESSAGE.defense)
-        MESSAGE.message += ` | ${MESSAGE.player} <span class='emphasis-green'>defended</span>`;
+        MESSAGE.message += ` | ${MESSAGE.target} <span class='emphasis-green'>defended</span>`;
     else if (!MESSAGE.defense && MESSAGE.action === "attack")
         MESSAGE.message += ` | ${MESSAGE.target} <span class='emphasis-red'>was attacked</span>`;
 }

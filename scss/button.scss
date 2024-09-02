@@ -1,11 +1,22 @@
 input{
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
     border: 0;
     text-align: center;
     cursor: pointer;
+    font-family: 'Squada One', cursive;
 }
 
 input[type = "text"]{
+    font-family: Arial, sans-serif;
+    letter-spacing: normal;
     cursor: auto;
+}
+
+.group-button{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
