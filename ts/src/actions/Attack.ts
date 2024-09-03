@@ -1,5 +1,6 @@
 import { ATTACK_VALUES, MESSAGE } from "../defined/Consts.js"
 import { Player } from "../defined/Types.js"
+import { runAttackAnimation } from "../screen/Animations.js"
 
 export function attack(player:Player, enemy:Player, attackType:string): void{
     const criticalChance: number = player.extraCriticalChance + (ATTACK_VALUES as any)[attackType].criticalChance
@@ -15,6 +16,8 @@ export function attack(player:Player, enemy:Player, attackType:string): void{
 
     if (!enemy.defense || player.defenseBreaker) enemy.life -= damage
     if (enemy.defense && !player.defenseBreaker) MESSAGE.defense = true
+
+    runAttackAnimation(attackType, (!(!enemy.defense || player.defenseBreaker)))
 
     resetPlayerStatusAfterAttack(player)
     resetEnemyStatusAfterAttack(enemy)

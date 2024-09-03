@@ -4,7 +4,7 @@ import { activeListenerButtons, checkGameOver } from "./defined/Auxiliar.js";
 import { GAME_STATUS, ACCEPT_KEYS, PLAYER_ONE_KEYS, PLAYER_TWO_KEYS, RANDOMIZE_KEYS } from "./defined/Consts.js";
 import { showMessageBox } from "./message/Message.js";
 import { changeMusic } from "./music/Music.js";
-import { changeLifeBar, showPlayerRound } from "./screen/State.js";
+import { changeLifeBar } from "./screen/State.js";
 document.addEventListener('click', () => {
     changeMusic('menu');
 }, { once: true });
@@ -18,7 +18,6 @@ function handleKeyPress(key, pressedByComputer) {
     GAME_STATUS.round = CALL_ACTION[key]();
     changeLifeBar();
     showMessageBox();
-    showPlayerRound();
     checkGameOver();
     if (GAME_STATUS.mode == "1vc" && (GAME_STATUS.round == 1 || GAME_STATUS.round == 1.5)) {
         const computerKey = getComputerKey();

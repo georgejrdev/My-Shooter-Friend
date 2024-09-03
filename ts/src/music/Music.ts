@@ -23,7 +23,7 @@ export function playMusic(){
 
         currentMusic = new Audio(`./assets/audio/${MUSIC.music}.mp3`)
         currentMusic.loop = true
-        currentMusic.volume = 0.25
+        currentMusic.volume = 0.15
         currentMusic.play()
     }
 }
@@ -39,12 +39,12 @@ export function stopMusic(){
 
 export function executeAudioEffect(effect: string, duration: number, volume: number = 0.25){
     const audioEffect = new Audio(`./assets/audio/${effect}.mp3`)
-    
     audioEffect.volume = volume
-    audioEffect.play()
-
-    setTimeout(()=>{
-        audioEffect.pause()
-        audioEffect.currentTime = 0
-    }, duration)
+    
+    audioEffect.play().then(() => {
+        setTimeout(() => {
+            audioEffect.pause()
+            audioEffect.currentTime = 0
+        }, duration)
+    })
 }

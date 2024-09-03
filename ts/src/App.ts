@@ -25,7 +25,6 @@ function handleKeyPress(key: string, pressedByComputer: boolean) {
 
     changeLifeBar()
     showMessageBox()
-    showPlayerRound()
     checkGameOver()
 
     if (GAME_STATUS.mode == "1vc" && (GAME_STATUS.round == 1 || GAME_STATUS.round == 1.5)) {

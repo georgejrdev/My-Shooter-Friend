@@ -1,5 +1,6 @@
 import { EFFECT_PHRASE, EFFECT_VALUES, MESSAGE } from "../defined/Consts.js";
 import { Player } from "../defined/Types.js";
+import { runOthersAnimations } from "../screen/Animations.js";
 
 export function randomizeEffect(player: Player, enemy: Player): void{
 
@@ -13,6 +14,8 @@ export function randomizeEffect(player: Player, enemy: Player): void{
 
     applyEffect(affectedPlayer, randomCategory, randomKey)
 
+    runOthersAnimations(randomKey)
+    
     MESSAGE.action = "effect"
     MESSAGE.player = player.name
     MESSAGE.effect = (EFFECT_PHRASE as any)[randomKey]()

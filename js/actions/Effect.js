@@ -1,4 +1,5 @@
 import { EFFECT_PHRASE, EFFECT_VALUES, MESSAGE } from "../defined/Consts.js";
+import { runOthersAnimations } from "../screen/Animations.js";
 export function randomizeEffect(player, enemy) {
     const categories = ["damage", "life", "defense"];
     const randomCategory = categories[Math.floor(Math.random() * categories.length)];
@@ -7,6 +8,7 @@ export function randomizeEffect(player, enemy) {
     const randomKey = keys[Math.floor(Math.random() * keys.length)];
     const affectedPlayer = (randomKey === "increaseEnemyBaseDamage") ? enemy : player;
     applyEffect(affectedPlayer, randomCategory, randomKey);
+    runOthersAnimations(randomKey);
     MESSAGE.action = "effect";
     MESSAGE.player = player.name;
     MESSAGE.effect = EFFECT_PHRASE[randomKey]();

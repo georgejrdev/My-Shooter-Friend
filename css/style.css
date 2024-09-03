@@ -200,10 +200,13 @@ input[type=button] {
   height: 300px;
 }
 #game #content #left-table, #game #content #right-table {
-  width: 230px;
+  width: 195px;
 }
 #game #content #mid-table {
-  width: 120px;
+  width: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #game #content .cards {
   display: flex;
@@ -267,6 +270,241 @@ input[type=text] {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.animation-weak-attack {
+  animation: weakAttack 1s step-end forwards;
+}
+
+.animation-weak-attack-defend {
+  animation: weakAttackDefend 1s step-end forwards;
+}
+
+.animation-normal-attack {
+  animation: normalAttack 1s step-end forwards;
+}
+
+.animation-normal-attack-defend {
+  animation: normalAttackDefend 1s step-end forwards;
+}
+
+.animation-strong-attack {
+  animation: strongAttack 0.8s step-end forwards;
+}
+
+.animation-strong-attack-defend {
+  animation: strongAttackDefend 0.8s step-end forwards;
+}
+
+@keyframes weakAttack {
+  0% {
+    background-image: url("../assets/image/animations/weak-init.png");
+  }
+  50% {
+    background-image: url("../assets/image/animations/weak-end.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes weakAttackDefend {
+  0% {
+    background-image: url("../assets/image/animations/weak-init.png");
+  }
+  50% {
+    background-image: url("../assets/image/animations/weak-defend.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes normalAttack {
+  0% {
+    background-image: url("../assets/image/animations/normal-init.png");
+  }
+  50% {
+    background-image: url("../assets/image/animations/normal-end.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes normalAttackDefend {
+  0% {
+    background-image: url("../assets/image/animations/normal-init.png");
+  }
+  50% {
+    background-image: url("../assets/image/animations/normal-defend.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes strongAttack {
+  0% {
+    background-image: url("../assets/image/animations/strong-init.png");
+  }
+  50% {
+    background-image: url("../assets/image/animations/strong-end.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes strongAttackDefend {
+  0% {
+    background-image: url("../assets/image/animations/strong-init.png");
+  }
+  50% {
+    background-image: url("../assets/image/animations/strong-defend.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+.animation-max-critical-chance {
+  animation: maxCriticalChance 3s normal forwards;
+}
+
+.animation-min-critical-chance {
+  animation: minCriticalChance 3s normal forwards;
+}
+
+.animation-increase-critical-chance {
+  animation: increaseCriticalChance 3s normal forwards;
+}
+
+.animation-decrease-critical-chance {
+  animation: decreaseCriticalChance 3s normal forwards;
+}
+
+.animation-increase-base-damage {
+  animation: increaseBaseDamage 3s normal forwards;
+}
+
+.animation-increase-enemy-base-damage {
+  animation: increaseEnemyBaseDamage 3s normal forwards;
+}
+
+.animation-increase-life {
+  animation: increaseLife 3s normal forwards;
+}
+
+.animation-decrease-life {
+  animation: decreaseLife 3s normal forwards;
+}
+
+.animation-increase-max-life {
+  animation: increaseMaxLife 3s normal forwards;
+}
+
+.animation-decrease-max-life {
+  animation: decreaseMaxLife 3s normal forwards;
+}
+
+.animation-defense-breaker {
+  animation: defenseBreaker 3s normal forwards;
+}
+
+.animation-defense {
+  animation: defense 3s normal forwards;
+}
+
+@keyframes maxCriticalChance {
+  2% {
+    background-image: url("../assets/image/animations/maxCriticalChance.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes minCriticalChance {
+  2% {
+    background-image: url("../assets/image/animations/minCriticalChance.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes increaseCriticalChance {
+  2% {
+    background-image: url("../assets/image/animations/increaseCriticalChance.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes decreaseCriticalChance {
+  2% {
+    background-image: url("../assets/image/animations/decreaseCriticalChance.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes increaseBaseDamage {
+  2% {
+    background-image: url("../assets/image/animations/increaseBaseDamage.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes increaseEnemyBaseDamage {
+  2% {
+    background-image: url("../assets/image/animations/increaseEnemyBaseDamage.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes increaseLife {
+  2% {
+    background-image: url("../assets/image/animations/increaseLife.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes decreaseLife {
+  2% {
+    background-image: url("../assets/image/animations/decreaseLife.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes increaseMaxLife {
+  2% {
+    background-image: url("../assets/image/animations/increaseMaxLife.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes decreaseMaxLife {
+  2% {
+    background-image: url("../assets/image/animations/decreaseMaxLife.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes defenseBreaker {
+  2% {
+    background-image: url("../assets/image/animations/breakDefense.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes defense {
+  2% {
+    background-image: url("../assets/image/animations/defense.png");
+  }
+  100% {
+    background-image: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
